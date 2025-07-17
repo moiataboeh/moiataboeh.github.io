@@ -205,19 +205,19 @@
     <div class="inputs">
       <h2>輸入參數</h2>
       <label><span class="desc shoulder-a">肩寬 (a) <span class="info-icon">i
-        <span class="tooltip">肩膀的寬度（含預留空間），作為成品肩膀寬度。</span>
+        <span class="tooltip">請從左肩至右肩測量，使用全肩寬作為計算依據。</span>
       </span></span><input type="number" id="a" value="40" min="0" /> 公分</label>
 
       <label><span class="desc shoulder-a">預留空間 (g) <span class="info-icon">i
-        <span class="tooltip">織布時所預留的額外空間。</span>
+        <span class="tooltip">為避免成品偏小，建議預留 4～6 公分寬度（織布縮率約 ±1 公分）。</span>
       </span></span><input type="number" id="g" value="6" min="0" /> 公分</label>
 
       <label><span class="desc shoulder-a">短衣長度 (r) <span class="info-icon">i
-        <span class="tooltip">傳統短衣前/後片之長度。</span>
+        <span class="tooltip">請從後頸至肋骨下測量，作為短衣長度之計算依據。</span>
       </span></span><input type="number" id="r" value="34" min="0" /> 公分</label>
 
       <label><span class="desc shoulder-a">長衣長度 (S) <span class="info-icon">i
-        <span class="tooltip">傳統長衣前/後片之長度。</span>
+        <span class="tooltip">請從後頸量至肋骨下方測量，作為長衣長度之計算依據。</span>
       </span></span><input type="number" id="S" value="90" min="0" /> 公分</label>
 
       <label><span class="desc shoulder-a">苧麻線捆數 (x) <span class="info-icon">i
@@ -225,7 +225,7 @@
       </span></span><input type="number" id="x" value="8" min="1" /> 捆線</label>
 
       <label><span class="desc shoulder-a">整經柱間距長度 (y) <span class="info-icon">i
-        <span class="tooltip">整經架長邊之左右圓柱間距</span>
+        <span class="tooltip">請測量整經架左右兩端圓柱之間的距離，作為經線每次往返的長度。</span>
       </span></span><input type="number" id="y" value="100" min="1" /> 公分</label>
 
       <button onclick="calculate()">計算</button>
@@ -247,10 +247,10 @@
         <strong style="color: #ffffff;">→ 依衣長與織片數所計算出的初始長度。短衣與長衣各兩片，並加上預留空間。</strong>
 
         <br><strong style="color: #EF233C;">3.經線條數 (W₁) = ⌈W / x⌉ * x</strong><br>  
-        <strong style="color: #ffffff;">→ 經線條數向上取捆線數 x 的倍數，以利整經時計算。</strong>
+        <strong style="color: #ffffff;">→ 因前面已預留空間(g)，此處經線條數只需向上取整為捆線數（x）的倍數，以方便整經時計算。</strong>
 
         <br><strong style="color: #EF233C;">4.經線長度 (L₁) = ⌈L / y⌉ * y</strong><br>  
-        <strong style="color: #ffffff;">→ 經線長度向上取整經柱距 y 的倍數，以利整經計算。</strong>
+        <strong style="color: #ffffff;">→ 經線長度向上取整為整經柱距（y）的倍數，並適度多估算，避免無法完成織作。</strong>
 
         <br><strong style="color: #EF233C;">5.整經拉線次數 (C₁) = W₁ / x</strong><br>  
         <strong style="color: #ffffff;">→ 計算整經時拉捆線的總次數，以利整經計算。</strong>
